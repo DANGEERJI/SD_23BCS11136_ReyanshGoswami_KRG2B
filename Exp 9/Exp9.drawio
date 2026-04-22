@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36">
   <diagram name="Page-1" id="detailed-movie-booking-hld">
-    <mxGraphModel dx="5113" dy="3543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="3228" dy="2286" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -21,11 +21,17 @@
         <mxCell id="svc-movie" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.ask_ack_container_service_for_kubernetes;verticalLabelPosition=bottom;verticalAlign=top;fontStyle=1;" value="movieSearchService" vertex="1">
           <mxGeometry height="60" width="60" x="420" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="svc-theater" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.add_on;fillColor=#759C3E;gradientColor=none;fontStyle=1;" value="theaterService" vertex="1">
-          <mxGeometry height="40" width="60" x="430" y="393" as="geometry" />
+        <mxCell id="XWYBLr4RL_F7SnjMA66q-2" edge="1" parent="1" source="svc-book" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="370" />
+              <mxPoint x="610" y="370" />
+            </Array>
+            <mxPoint x="830" y="370" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="svc-book" parent="1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.enterprise.plug_and_play;fontStyle=1;" value="bookingService" vertex="1">
-          <mxGeometry height="60" width="60" x="420" y="460" as="geometry" />
+          <mxGeometry height="60" width="60" x="480" y="400" as="geometry" />
         </mxCell>
         <mxCell id="6-EHvQOlFYxVPm9RsuBk-26" edge="1" parent="1" source="svc-pay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="iSTVJsQ0WiM1vbO7s_Gc-2" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -53,7 +59,7 @@
           <mxGeometry height="60" width="60" x="642.86" y="250" as="geometry" />
         </mxCell>
         <mxCell id="cache-seat" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;shape=image;verticalLabelPosition=bottom;verticalAlign=top;fontStyle=1;" value="seatLockCache" vertex="1">
-          <mxGeometry height="40" width="60" x="760" y="480" as="geometry" />
+          <mxGeometry height="40" width="60" x="832.5" y="350" as="geometry" />
         </mxCell>
         <mxCell id="mq" parent="1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.queue_generic;fontStyle=1;" value="Event Queue (Kafka)" vertex="1">
           <mxGeometry height="30" width="100" x="622.86" y="820" as="geometry" />
@@ -112,19 +118,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e-api-theater" edge="1" parent="1" source="apigw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="svc-theater">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="365" y="330" />
-              <mxPoint x="365" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="e-api-book" edge="1" parent="1" source="apigw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="svc-book">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="365" y="330" />
-              <mxPoint x="365" y="490" />
+              <mxPoint x="365" y="410" />
+              <mxPoint x="470" y="410" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -159,36 +158,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e-theater-db" edge="1" parent="1" source="svc-theater" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="iSTVJsQ0WiM1vbO7s_Gc-5">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="700" y="413" />
-              <mxPoint x="700" y="408" />
-            </Array>
-            <mxPoint x="750" y="360" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e-book-cache" edge="1" parent="1" source="svc-book" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="cache-seat">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="760" y="490" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="e-book-db" edge="1" parent="1" source="svc-book" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="db-book">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="540" y="490" />
               <mxPoint x="540" y="570" />
               <mxPoint x="1030" y="570" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e-book-mq" edge="1" parent="1" source="svc-book" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="mq">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="500" y="490" />
-              <mxPoint x="500" y="715" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -222,9 +197,6 @@
         </mxCell>
         <mxCell id="iSTVJsQ0WiM1vbO7s_Gc-4" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance_2;fillColor=#2E73B8;gradientColor=none;" value="movieDB" vertex="1">
           <mxGeometry height="63" width="60" x="1000" y="187" as="geometry" />
-        </mxCell>
-        <mxCell id="iSTVJsQ0WiM1vbO7s_Gc-5" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance_2;fillColor=#2E73B8;gradientColor=none;" value="theaterDB" vertex="1">
-          <mxGeometry height="63" width="60" x="910" y="377" as="geometry" />
         </mxCell>
         <mxCell id="6-EHvQOlFYxVPm9RsuBk-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Notification Service" vertex="1">
           <mxGeometry height="30" width="110" x="975" y="815" as="geometry" />
@@ -282,6 +254,23 @@
           <mxGeometry height="60" width="120" x="772.5" y="190" as="geometry" />
         </mxCell>
         <mxCell id="6-EHvQOlFYxVPm9RsuBk-28" edge="1" parent="1" source="mq" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.01;entryY=0.515;entryDx=0;entryDy=0;entryPerimeter=0;" target="iSTVJsQ0WiM1vbO7s_Gc-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XWYBLr4RL_F7SnjMA66q-3" edge="1" parent="1" source="svc-book" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.334;entryY=0.198;entryDx=0;entryDy=0;entryPerimeter=0;" target="mq">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="620" />
+              <mxPoint x="656" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XWYBLr4RL_F7SnjMA66q-4" parent="1" style="image;html=1;image=img/lib/atlassian/Jira_Service_Desk_Logo.svg;" value="" vertex="1">
+          <mxGeometry height="76" width="59" x="1180" y="180.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XWYBLr4RL_F7SnjMA66q-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Third party movie and theatre&amp;nbsp;Add Serrvice" vertex="1">
+          <mxGeometry height="30" width="160" x="1129.5" y="256.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XWYBLr4RL_F7SnjMA66q-7" edge="1" parent="1" source="XWYBLr4RL_F7SnjMA66q-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="iSTVJsQ0WiM1vbO7s_Gc-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
