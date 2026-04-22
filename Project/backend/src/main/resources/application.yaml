@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ExposeIT
+  datasource:
+    url: "Your database url"
+    username: "Your database username"
+    password: "Your database password"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  elasticsearch:
+    uris: "Your elastic search url"
+    username: "Your elastic search username"
+    password: "Your elastic search password"
+
+application:
+  security:
+    jwt: "jwt secret key"
+    jwt-expiration: 900000  #15 mins
+    refresh-expiration: 1296000000 #15 days
